@@ -1,13 +1,12 @@
 import './Card.scss';
 
 const card = (props) => {
-
     return (
-        <button className="card" onClick={props.click}>
+        <button className={props.status === 'active' ? 'card active' : props.status === 'flipped' ? 'card flipped' : 'card'} onClick={props.click}>
             <div className="card__container">
                 <div className="card__front"></div>
                 <div className="card__back">
-                    {props.card}
+                    {props.val}
                 </div>
             </div>
         </button>

@@ -1,18 +1,28 @@
 .card {
-    flex: 0 0 calc(25% - 15px);
-    height: 300px;
+    flex: 0 0 calc(20% - 15px);
+    height: 25%;
     margin: 0 0 30px 0;
     padding: 0;
     background-color: white;
     border: 0;
     perspective: 1000px;
 
-    &:hover,
-    .is-flipped {
-        
+    &.active {
+
+        &:hover {
+            cursor: pointer;
+        }
+
         .card__container {
     		transform: rotateY(180deg);
     	}
+    }
+
+    &.flipped {
+        
+        .card__front {
+            background-color: black;
+        }
     }
 
     &__container {
