@@ -110,7 +110,9 @@ class Board extends Component {
                                     const flippedCards = [...this.state.flippedCards];
 
                                     flippedCards.map((card) => {
-                                        card.status = 'flipped';
+                                        return (
+                                            card.status = 'flipped'
+                                        )
                                     });
 
                                     this.setState({
@@ -145,7 +147,9 @@ class Board extends Component {
                                     const flippedCards = [...this.state.flippedCards];
 
                                     flippedCards.map((card) => {
-                                        card.status = '';
+                                        return (
+                                            card.status = ''
+                                        )
                                     });
 
                                     this.setState({
